@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Time Prediction</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="card shadow-lg p-4">
+            <h1 class="text-center mb-4 text-primary">Predict Delivery Time</h1>
+            <p class="text-center mb-4 text-muted">Enter the details below to predict the delivery time for an order.</p>
+
+            <form action="/predict" method="post">
+                <!-- Form Group for Numerical Inputs -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group mb-3">
+                            <label for="multiple_deliveries">Multiple Deliveries (0-4)</label>
+                            <input type="number" class="form-control" id="multiple_deliveries" name="multiple_deliveries" min="0" max="4" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group mb-3">
+                            <label for="age">Delivery Person Age (15-50)</label>
+                            <input type="number" class="form-control" id="age" name="age" min="15" max="50" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group mb-3">
+                            <label for="vehicle_condition">Vehicle Condition (0-4)</label>
+                            <input type="number" class="form-control" id="vehicle_condition" name="vehicle_condition" min="0" max="4" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group mb-3">
+                            <label for="delivery_person_ratings">Delivery Person Ratings (1-6)</label>
+                            <input type="number" step="0.1" class="form-control" id="delivery_person_ratings" name="delivery_person_ratings" min="1" max="6" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group mb-3">
+                            <label for="order_prepare_time">Order Prepare Time (3-15 mins)</label>
+                            <input type="number" class="form-control" id="order_prepare_time" name="order_prepare_time" min="3" max="15" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group mb-3">
+                            <label for="date">Date (1-31)</label>
+                            <input type="number" class="form-control" id="date" name="date" min="1" max="31" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categorical Inputs as Dropdowns -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group mb-3">
+                            <label for="weather_conditions">Weather Conditions</label>
+                            <select class="form-control" id="weather_conditions" name="weather_conditions">
+                                <option value="0">Cloudy</option>
+                                <option value="1">Fog</option>
+                                <option value="2">Sandstorms</option>
+                                <option value="3">Stormy</option>
+                                <option value="4">Sunny</option>
+                                <option value="5">Windy</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group mb-3">
+                            <label for="type_of_vehicle">Type of Vehicle</label>
+                            <select class="form-control" id="type_of_vehicle" name="type_of_vehicle">
+                                <option value="0">Bicycle</option>
+                                <option value="1">Electric Scooter</option>
+                                <option value="2">Motorcycle</option>
+                                <option value="3">Scooter</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group mb-3">
+                            <label for="festival">Festival</label>
+                            <select class="form-control" id="festival" name="festival">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group mb-3">
+                            <label for="city">City</label>
+                            <select class="form-control" id="city" name="city">
+                                <option value="0">Metropolitan</option>
+                                <option value="1">Semi-Urban</option>
+                                <option value="2">Urban</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group mb-3">
+                            <label for="road_traffic_density">Road Traffic Density</label>
+                            <select class="form-control" id="road_traffic_density" name="road_traffic_density">
+                                <option value="0">High</option>
+                                <option value="1">Jam</option>
+                                <option value="2">Low</option>
+                                <option value="3">Medium</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary btn-block">Predict Delivery Time</button>
+                </div>
+            </form>
+
+            <!-- Display Prediction -->
+            <h2 class="text-center mt-4 text-success">{{ prediction_text }}</h2>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
