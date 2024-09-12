@@ -5,7 +5,7 @@ Welcome to the Delivery Time Prediction Web App repository. This project aims to
 ---
 
 <div align="center">
-  <img src="./static/delivery_image.png" alt="Delivery Image" style="border:none;">
+  <img src="./delivery_image.png" alt="Delivery Image" style="border:none;">
 </div>
 
 ## Overview
