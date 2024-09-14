@@ -41,7 +41,7 @@ This project is built to predict the time taken for deliveries using a trained X
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/your_username/Delivery-Time-Prediction.git
-   cd Delivery-Time-Prediction
+   cd Delivery Time Prediction
    
 2. **Install the required packages**:
    Ensure you have Python 3.x installed. Install dependencies by running:
