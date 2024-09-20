@@ -1,4 +1,4 @@
-# **Delivery Time Prediction Web App**
+# **Food Delivery Time Prediction Web App**
 
 Welcome to the Delivery Time Prediction Web App repository. This project aims to predict delivery times for orders based on various factors such as delivery person details, weather, traffic density, and more using machine learning. Below are instructions for setting up the project, its features, and deployment on Render using Docker.
 
@@ -43,8 +43,8 @@ This project is built to predict the time taken for deliveries using a trained X
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your_username/Delivery-Time-Prediction.git
-   cd Delivery Time Prediction
+   git clone https://github.com/your_username/Food-Delivery-Time-Prediction.git
+   cd Food Delivery Time Prediction
    
 2. **Install the required packages**:
    Ensure you have Python 3.x installed. Install dependencies by running:
