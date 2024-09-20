@@ -1,4 +1,4 @@
-# Delivery Time Prediction Web App
+# **Delivery Time Prediction Web App**
 
 Welcome to the Delivery Time Prediction Web App repository. This project aims to predict delivery times for orders based on various factors such as delivery person details, weather, traffic density, and more using machine learning. Below are instructions for setting up the project, its features, and deployment on Render using Docker.
 
@@ -8,13 +8,13 @@ Welcome to the Delivery Time Prediction Web App repository. This project aims to
   <img src="./delivery_image.png" alt="Delivery Image" style="border:none;">
 </div>
 
-## Overview
+## 🚀 **Overview**
 
 This project is built to predict the time taken for deliveries using a trained XGBoost model. Users can input delivery details (e.g., multiple deliveries, vehicle condition, weather) and get a prediction for the expected delivery time. The project includes a Flask backend, an interactive frontend, and uses Docker for deployment.
 
 ---
 
-## Features
+## ✨ **Features**
 
 - `Data Preprocessing`: Handles missing values, encodes categorical variables, and normalizes data.
 - `Model Building`: Trains an XGBoost model and saves the best model for deployment.
@@ -24,7 +24,7 @@ This project is built to predict the time taken for deliveries using a trained X
 
 ---
 
-## Contents
+## 📂 **Contents**
 
 - `app.py`: Flask backend for model loading and predictions.
 - `best_xgb_model.pkl`: Pretrained XGBoost model file.
@@ -36,7 +36,8 @@ This project is built to predict the time taken for deliveries using a trained X
 
 ---
 
-## Getting Started
+
+## 🛠️  **Getting Started**
 
 1. **Clone the repository**:
    ```bash
@@ -61,7 +62,7 @@ This project is built to predict the time taken for deliveries using a trained X
 
 ---
 
-## Deployment Instructions
+## 🚢 **Deployment Instructions**
 
 ### 1. Model Training: 
 
@@ -80,7 +81,7 @@ Train the model using the provided Jupyter notebook and save the trained model a
 
 ---
 
-## Key Insights
+## 🔍 **Key Insights**
 
 - Successfully trained and deployed an XGBoost model for delivery time predictions.
 - Frontend designed with Bootstrap for user-friendly input and prediction display.
@@ -88,7 +89,7 @@ Train the model using the provided Jupyter notebook and save the trained model a
 
 ---
 
-## Tools and Libraries
+## 🛠️ **Tools and Libraries**
 
 - Flask: For the web backend.
 - Pandas: For data manipulation and analysis.
@@ -99,9 +100,12 @@ Train the model using the provided Jupyter notebook and save the trained model a
 
 ---
 
-## Contributing
+## 🤝 **Contributing**
 If you have suggestions or improvements, feel free to open an issue or create a pull request.
 
 ---
 
-## *Thank you for visiting! If you find this project useful, please consider starring the repository. Happy coding!*
+## ⭐ **Thank You!**
+
+Thank you for visiting! If you find this project useful, please consider starring the repository. Happy coding!
+
