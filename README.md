@@ -8,6 +8,8 @@ Welcome to the Delivery Time Prediction Web App repository. This project aims to
   <img src="./delivery_image.png" alt="Delivery Image" style="border:none;">
 </div>
 
+---
+
 ## 🚀 **Overview**
 
 This project is built to predict the time taken for deliveries using a trained XGBoost model. Users can input delivery details (e.g., multiple deliveries, vehicle condition, weather) and get a prediction for the expected delivery time. The project includes a Flask backend, an interactive frontend, and uses Docker for deployment.
